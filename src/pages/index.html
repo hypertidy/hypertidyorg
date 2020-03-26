@@ -1,0 +1,29 @@
+{{> header}}
+
+<div class = "backgroundClass">
+
+    {{> hypertidy}}
+
+    <section id="blog">
+    {{> sections_header}}
+    {{#each blogshort}}
+    {{> blog_header}}
+    <a href="{{ link }}", style="color:#262626;">
+        <div align="center">
+            <h3>{{ title }}</h3>
+        </div>
+        <div align="center">
+            <p style="color:#888888;">{{ created }}</p>
+        </div>
+        <div align="center">
+            <p>{{ description }}</p>
+        </div>
+    </a>
+    {{> blog_footer}}
+    {{/each}}
+    {{> sections_footer}}
+    </section>
+
+    {{> footer}}
+
+</div>
